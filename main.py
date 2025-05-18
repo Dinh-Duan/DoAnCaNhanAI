@@ -13,19 +13,21 @@ try:
     from algorithms import ALGORITHM_LIST
 except ImportError:
     ALGORITHM_LIST = [
+        ("BFS (Breadth-First Search)", "bfs"), ("BFS (Double Moves)", "bfs_double"),
+        ("DFS (Depth-First Search)", "dfs"), ("DFS (Double Moves)", "dfs_double"),
+        ("IDDFS (Iterative Deepening DFS)", "iddfs"), ("IDDFS (Double Moves)", "iddfs_double"),
+        ("UCS (Uniform Cost Search)", "ucs"), ("UCS (Double Moves)", "ucs_double"),
         ("Greedy Search", "greedy"), ("Greedy Search (Double Moves)", "greedy_double"),
         ("A* Search (Manhattan)", "a_star_manhattan"), ("A* Search (Manhattan, Double)", "a_star_manhattan_double"),
         ("A* Search (Misplaced)", "a_star_misplaced"), ("A* Search (Misplaced, Double)", "a_star_misplaced_double"),
-        ("BFS (Breadth-First Search)", "bfs"), ("BFS (Double Moves)", "bfs_double"),
-        ("UCS (Uniform Cost Search)", "ucs"), ("UCS (Double Moves)", "ucs_double"),
-        ("Hill Climbing", "hill_climbing"), ("Hill Climbing (Double)", "hill_climbing_double"),
-        ("Stochastic Hill Climbing", "stochastic_hc"), ("Stochastic Hill Climbing (Double)", "stochastic_hc_double"),
-        ("DFS (Depth-First Search)", "dfs"), ("DFS (Double Moves)", "dfs_double"),
-        ("Steepest Ascent Hill Climbing", "steepest_hc"), ("Steepest Ascent Hill Climbing (Double)", "steepest_hc_double"),
-        ("IDDFS (Iterative Deepening DFS)", "iddfs"), ("IDDFS (Double Moves)", "iddfs_double"),
         ("IDA* Search", "ida_star"), ("IDA* (Double Moves)", "ida_star_double"),
+        ("Hill Climbing", "hill_climbing"), ("Hill Climbing (Double)", "hill_climbing_double"),
+        ("Steepest Ascent Hill Climbing", "steepest_hc"), ("Steepest Ascent Hill Climbing (Double)", "steepest_hc_double"),
+        ("Stochastic Hill Climbing", "stochastic_hc"), ("Stochastic Hill Climbing (Double)", "stochastic_hc_double"),
         ("Beam Search", "beam_search"), ("Genetic Algorithm", "genetic"),
-        ("Genetic Algorithm (AND/OR, Double)", "genetic_andor_double"),  ("QLearning", "q_learning"),
+        ("Simulated Annealing", "simulated_annealing"), ("Simulated Annealing (Double Moves)", "simulated_annealing_ANDOR"),
+        ("Genetic Algorithm (AND/OR, Double)", "genetic_andor_double"),  
+        ("QLearning", "q_learning"),
     ]
     print("Warning: Could not import ALGORITHM_LIST from algorithms package. Using default list.")
     if not os.path.exists('algorithms'):
