@@ -34,7 +34,7 @@ Tìm kiếm không thông tin là nhóm thuật toán không sử dụng bất k
 - **Breadth-First Search (BFS):** Duyệt theo chiều rộng, đảm bảo tìm ra đường đi ngắn nhất về số bước.
 
   - `BFS` (Di chuyển đơn)
-    ![](gif/bfs.GIF)
+    ![](gif/bfs.gif)
   - `BFS (Double Moves)` / `bfs_ANDOR`
     ![](gif/bfs-ao.GIF)
 
