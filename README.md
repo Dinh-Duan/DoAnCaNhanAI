@@ -150,7 +150,6 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
   - `Genetic Algorithm` (Di chuyển đơn)
     ![](gif/genetic.GIF)
   - `Genetic Algorithm (Double Moves)` / `genetic_ANDOR`
-    ![](gif/genetic-ao.GIF)
 
 **Hình ảnh hiệu suất**
 
