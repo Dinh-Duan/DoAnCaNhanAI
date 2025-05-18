@@ -34,19 +34,27 @@ Tìm kiếm không thông tin là nhóm thuật toán không sử dụng bất k
 - **Breadth-First Search (BFS):** Duyệt theo chiều rộng, đảm bảo tìm ra đường đi ngắn nhất về số bước.
 
   - `BFS` (Di chuyển đơn)
+    ![](gif/bfs.GIF)
   - `BFS (Double Moves)` / `bfs_ANDOR`
+    ![](gif/bfs-ao.GIF)
 
 - **Depth-First Search (DFS):** Duyệt theo chiều sâu, có thể tìm ra giải pháp nhanh nhưng không đảm bảo tối ưu.
 
   - `DFS` (Di chuyển đơn)
+    ![](gif/dfs.GIF)
   - `DFS (Double Moves)` / `dfs_ANDOR`
+    ![](gif/dfs-ao.GIF)
 
 - **Iterative Deepening DFS (IDDFS):** Kết hợp ưu điểm của BFS (tối ưu) và DFS (không gian bộ nhớ).
   - `IDDFS` (Di chuyển đơn)
+    ![](gif/iddfs.GIF)
   - `IDDFS (Double Moves)` / `iddfs_ANDOR`
+    ![](gif/iddfs-ao.GIF)
 - **Uniform-Cost Search (UCS):** Tìm đường đi với chi phí thấp nhất (khi các hành động có chi phí khác nhau).
   - `UCS` (Di chuyển đơn, chi phí mỗi bước là 1)
+    ![](gif/ucs.GIF)
   - `UCS (Double Moves)` / `ucs_ANDOR` (Di chuyển đơn chi phí 1, di chuyển kép chi phí 2)
+    ![](gif/ucs-ao.GIF)
 
 **Hình ảnh hiệu suất**
 
@@ -60,12 +68,12 @@ Tìm kiếm không thông tin là nhóm thuật toán không sử dụng bất k
 ![](hieusuat/ucs-ao.png)
 
 **Nhận xét**
+
 - Thuật toán khi có kết hợp với cây AND-OR sẽ cho ra hiệu suất có vẻ cao hơn so với thường.
 - Hiệu quả tổng thể: BFS (Double Moves) và IDDFS (Double Moves) nổi bật với số node duyệt ít (5), thời gian nhanh (0.001-0.002 s), phù hợp cho bài toán nhỏ hoặc yêu cầu đường đi ngắn nhất.
 - Kém hiệu quả nhất: DFS (tiêu chuẩn) kém nhất khi duyệt tới 64583 node, thời gian dài (0.161 s), không hiệu quả cho không gian tìm kiếm lớn.
 - Ổn định: UCS và BFS (tiêu chuẩn) có hiệu suất tốt, thời gian nhanh (0.001 s) với số node vừa phải (9), phù hợp cho bài toán cần đường đi tối ưu.
 - Khuyến nghị: Ưu tiên BFS hoặc IDDFS (Double Moves) cho bài toán nhỏ, trong khi DFS nên tránh với không gian tìm kiếm lớn.
-
 
 ### 2.2. Nhóm thuật toán tìm kiếm có thông tin
 
@@ -76,16 +84,22 @@ Tìm kiếm có thông tin sử dụng thêm kiến thức về bài toán, dư�
 - **Greedy Best-First Search:** Luôn ưu tiên mở rộng nút có vẻ "gần" đích nhất theo heuristic.
 
   - `Greedy Search` (Di chuyển đơn)
+    ![](gif/greedy.GIF)
   - `Greedy Search (Double Moves)` / `greedy_ANDOR`
+    ![](gif/greedy-ao.GIF)
 
 - **A\* Search:** Kết hợp chi phí thực tế đã đi (g) và chi phí ước lượng còn lại (h) để tìm đường đi tối ưu về tổng chi phí.
 
   - `A* Search` (Di chuyển đơn, sử dụng heuristic Manhattan)
+    ![](gif/astar.GIF)
   - `A* Search (Double Moves)` / `a_star_ANDOR` (Sử dụng heuristic Manhattan, di chuyển kép có chi phí cao hơn)
+    ![](gif/astar-ao.GIF)
 
 - **Iterative Deepening A* (IDA*):** Tương tự IDDFS nhưng sử dụng hàm f(n) = g(n) + h(n) làm giới hạn.
   - `IDA* Search` (Di chuyển đơn)
+    ![](gif/ida.GIF)
   - `IDA* (Double Moves)` / `ida_star_ANDOR`
+    ![](gif/ida-ao.GIF)
 
 **Hình ảnh hiệu suất**
 
@@ -97,6 +111,7 @@ Tìm kiếm có thông tin sử dụng thêm kiến thức về bài toán, dư�
 ![](hieusuat/ida-ao.png)
 
 **Nhận xét**
+
 - Tương tự như nhóm trên, thuật toán kết hợp với AND-OR Search Tree cho ra kết quả hiệu quả hơn.
 - Hiệu quả cao nhất: A* (Double Moves) và IDA* (Double Moves) vượt trội với 5 node và thời gian 0.000 s.
 - Hiệu quả thấp hơn: Greedy Search (27 node) tiêu tốn nhiều tài nguyên hơn.
@@ -112,21 +127,30 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
   - `Simple Hill Climbing`: Di chuyển đến lân cận tốt hơn đầu tiên tìm thấy (trong project này, logic có thể chọn ngẫu nhiên trong các bước cải thiện).
     - `Hill Climbing` (Di chuyển đơn)
     - `Hill Climbing (Double Moves)` / `hill_climbing_ANDOR`
+      ![](gif/hc-ao.GIF)
   - `Steepest Ascent Hill Climbing`: Di chuyển đến lân cận _tốt nhất_ trong số tất cả các lân cận.
     - `Steepest Ascent Hill Climbing` (Di chuyển đơn)
     - `Steepest Ascent Hill Climbing (Double Moves)` / `steepest_hill_ANDOR`
+      ![](gif/stee-hc-ao.GIF)
   - `Stochastic Hill Climbing`: Chọn một lân cận tốt hơn một cách ngẫu nhiên từ các lân cận cải thiện.
     - `Stochastic Hill Climbing` (Di chuyển đơn)
+      ![](gif/sto-hc.GIF)
     - `Stochastic Hill Climbing (Double Moves)` / `stochastic_hc_ANDOR` (_Chính xác là stochastic_hill_ANDOR.py_)
+      ![](gif/sto-hc-ao.GIF)
 - **Local Beam Search:** Giữ lại một số lượng (`beam_width`) các trạng thái tốt nhất ở mỗi bước để khám phá song song.
   - `Beam Search` (Di chuyển đơn)
+    ![](gif/beam.GIF)
   - `Beam Search (Double Moves)` / `beam_search_ANDOR`
+    ![](gif/beam-ao.GIF)
 - **Simulated Annealing:** Cho phép di chuyển đến trạng thái xấu hơn với một xác suất nhất định (giảm dần theo "nhiệt độ") để thoát khỏi cực trị địa phương.
   - `Simulated Annealing` (Di chuyển đơn)
   - `Simulated Annealing (Double Moves)` / `simulated_annealing_ANDOR`
+    ![](gif/sa-ao.GIF)
 - **Genetic Aglorithm** Một phương pháp để giải quyết cả bài toán tối ưu hóa có ràng buộc và không ràng buộc dựa trên chọn lọc tự nhiên.
   - `Genetic Algorithm` (Di chuyển đơn)
+    ![](gif/genetic.GIF)
   - `Genetic Algorithm (Double Moves)` / `genetic_ANDOR`
+    ![](gif/genetic-ao.GIF)
 
 **Hình ảnh hiệu suất**
 
@@ -144,6 +168,7 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
 ![](hieusuat/genetic-ao.png)
 
 **Nhận xét**
+
 - Hiệu quả cao nhất: Steepest Hill Climbing (Double Moves), Hill Climbing (Double Moves), và Beam Search (Double Moves) nổi bật với 5 node và thời gian 0.000-0.001 s, rất phù hợp cho bài toán nhỏ.
 - Hiệu quả thấp nhất: Stochastic Hill Climbing (554 node) và các thuật toán không tìm thấy đường đi (Hill Climbing, Steepest Hill Climbing, Simulated Annealing) kém hiệu quả (đối với trạng thái ban đầu này thì không tìm thấy đường đi)
 - Khuyến nghị: Ưu tiên Steepest Hill Climbing (Double Moves) hoặc Hill Climbing (Double Moves) cho bài toán nhỏ cần hiệu suất cao. Tránh Simulated Annealing và các biến thể không Double Moves do không tìm được giải pháp.
@@ -152,22 +177,26 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
 
 - **Searching with No Observation (Blind Belief Search):**
   - Triển khai trong `blind.py`. Agent không biết chắc chắn trạng thái hiện tại của mình mà duy trì một "belief state" (tập hợp các trạng thái có thể). Mục tiêu là tìm một chuỗi hành động chung để đưa tất cả các trạng thái trong belief state về một trong các trạng thái đích. Đây là một ví dụ về tìm kiếm trong không gian belief state, sử dụng BFS trên các belief state.
+    ![](blind.gif)
 
 ### 2.5. Giải Quyết Vấn Đề Thỏa Mãn Ràng Buộc (CSP)
 
 - Việc điền số vào lưới 8-puzzle được xem như một dạng CSP.
   - **Backtracking Search:** Sử dụng trong tính năng "Hoạt ảnh Điền Số" (`fill.py`) để tìm một cách điền các số từ 1-9 vào lưới sao cho thỏa mãn trạng thái đích. Thuật toán thử các giá trị và quay lui nếu gặp ngõ cụt.
+    ![](backtracking.gif)
 
 ### 2.6. Học tăng cường
 
 - Agent học cách hành động tối ưu thông qua tương tác với môi trường và nhận phản hồi (reward/penalty).\*
   - **Q-Learning:** Triển khai trong `q_learning.py`. Agent xây dựng một bảng Q-table để ước lượng giá trị của việc thực hiện một hành động tại một trạng thái cụ thể. Cần quá trình "huấn luyện" để bảng Q-table hội tụ.
+    ![](gif/qlearning.GIF)
 
 **Hiệu suất**
 
 ![](hieusuat/qlearning.png)
 
 **Nhận xét**
+
 - Thuật toán QLearning duyệt một số lượng rất lớn node (119704), nhưng chỉ cần 9 bước để tìm đường đi tối ưu, với thời gian 0.498 s. Điều này cho thấy QLearning hiệu quả trong việc học và tối ưu hóa đường đi sau khi xử lý nhiều trạng thái, nhưng tiêu tốn nhiều tài nguyên tính toán.
 - Phù hợp cho bài toán học tăng cường (reinforcement learning) với dữ liệu lớn, nhưng không tối ưu nếu yêu cầu tốc độ cao hoặc không gian tìm kiếm nhỏ.
 
