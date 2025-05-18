@@ -49,6 +49,7 @@ Tìm kiếm không thông tin là nhóm thuật toán không sử dụng bất k
   - `UCS (Double Moves)` / `ucs_ANDOR` (Di chuyển đơn chi phí 1, di chuyển kép chi phí 2)
 
 **Hình ảnh hiệu suất**
+
 ![](hieusuat/bfs.png)
 ![](hieusuat/bfs-ao.png)
 ![](hieusuat/dfs.png)
@@ -117,6 +118,7 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
   - `Genetic Algorithm (Double Moves)` / `genetic_ANDOR`
 
 **Hình ảnh hiệu suất**
+
 ![](hieusuat/hc.png)
 ![](hieusuat/hc-ao.png)
 ![](hieusuat/stee-hc.png)
@@ -148,8 +150,11 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
   - **Q-Learning:** Triển khai trong `q_learning.py`. Agent xây dựng một bảng Q-table để ước lượng giá trị của việc thực hiện một hành động tại một trạng thái cụ thể. Cần quá trình "huấn luyện" để bảng Q-table hội tụ.
 
 **Hiệu suất**
+
 ![](hieusuat/qlearning.png)
+
 **Nhận xét**
+
 
 ---
 
