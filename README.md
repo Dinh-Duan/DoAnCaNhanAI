@@ -176,13 +176,13 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
 
 - **Searching with No Observation (Blind Belief Search):**
   - Triển khai trong `blind.py`. Agent không biết chắc chắn trạng thái hiện tại của mình mà duy trì một "belief state" (tập hợp các trạng thái có thể). Mục tiêu là tìm một chuỗi hành động chung để đưa tất cả các trạng thái trong belief state về một trong các trạng thái đích. Đây là một ví dụ về tìm kiếm trong không gian belief state, sử dụng BFS trên các belief state.
-    ![](blind.gif)
+    ![](gif/blind.gif)
 
 ### 2.5. Giải Quyết Vấn Đề Thỏa Mãn Ràng Buộc (CSP)
 
 - Việc điền số vào lưới 8-puzzle được xem như một dạng CSP.
   - **Backtracking Search:** Sử dụng trong tính năng "Hoạt ảnh Điền Số" (`fill.py`) để tìm một cách điền các số từ 1-9 vào lưới sao cho thỏa mãn trạng thái đích. Thuật toán thử các giá trị và quay lui nếu gặp ngõ cụt.
-    ![](backtracking.gif)
+    ![](gif/backtracking.gif)
 
 ### 2.6. Học tăng cường
 
