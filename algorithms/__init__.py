@@ -1,6 +1,6 @@
 ALGORITHM_LIST = [
     ("Greedy Search", "greedy"),
-    ("Greedy Search(Double Moves)", "greedy_ANDOR"),
+    ("Greedy Search (Double Moves)", "greedy_ANDOR"),
 
     ("A* Search", "a_star"),
     ("A* Search (Double Moves)", "a_star_ANDOR"),
@@ -12,16 +12,16 @@ ALGORITHM_LIST = [
     ("UCS (Double Moves)", "ucs_ANDOR"),
 
     ("Hill Climbing", "hill_climbing"),
-    ("Hill Climbing (Double)", "hill_climbing_ANDOR"),
+    ("Hill Climbing (Double Moves)", "hill_climbing_ANDOR"),
 
     ("Stochastic Hill Climbing", "stochastic_hill"),
-    ("Stochastic Hill Climbing (Double)", "stochastic_hill_ANDOR"),
+    ("Stochastic Hill Climbing (Double Moves)", "stochastic_hill_ANDOR"),
 
     ("DFS", "dfs"),
     ("DFS (Double Moves)", "dfs_ANDOR"),
 
     ("Steepest Hill Climbing", "steepest_hill"),
-    ("Steepest Hill (Double)", "steepest_hill_ANDOR"),
+    ("Steepest Hill (Double Moves)", "steepest_hill_ANDOR"),
 
     ("IDDFS", "iddfs"),
     ("IDDFS (Double Moves)", "iddfs_ANDOR"),
@@ -33,9 +33,11 @@ ALGORITHM_LIST = [
     ("Beam Search(Double Moves)", "beam_search_ANDOR"),
 
     ("Simulated Annealing", "simulated_annealing"),
-    ("Simulated Annealing (Double)", "simulated_annealing_ANDOR"),
+    ("Simulated Annealing (Double Moves)", "simulated_annealing_ANDOR"),
     
     ("Genetic Algorithm", "genetic"),
-    ("Sensorless Genetic", "sensorless_genetic"),
+    ("Genetic Algorithm (Double Moves)", "genetic_ANDOR"),
+
+    ("QLearning", "q_learning"),
 
 ]
