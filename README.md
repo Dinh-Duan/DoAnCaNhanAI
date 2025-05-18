@@ -82,6 +82,7 @@ Tìm kiếm có thông tin sử dụng thêm kiến thức về bài toán, dư�
   - `IDA* (Double Moves)` / `ida_star_ANDOR`
 
 **Hình ảnh hiệu suất**
+
 ![](hieusuat/greedy.png)
 ![](hieusuat/greedy-ao.png)
 ![](hieusuat/astar.png)
