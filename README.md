@@ -60,6 +60,12 @@ Tìm kiếm không thông tin là nhóm thuật toán không sử dụng bất k
 ![](hieusuat/ucs-ao.png)
 
 **Nhận xét**
+- Thuật toán khi có kết hợp với cây AND-OR sẽ cho ra hiệu suất có vẻ cao hơn so với thường.
+- Hiệu quả tổng thể: BFS (Double Moves) và IDDFS (Double Moves) nổi bật với số node duyệt ít (5), thời gian nhanh (0.001-0.002 s), phù hợp cho bài toán nhỏ hoặc yêu cầu đường đi ngắn nhất.
+- Kém hiệu quả nhất: DFS (tiêu chuẩn) kém nhất khi duyệt tới 64583 node, thời gian dài (0.161 s), không hiệu quả cho không gian tìm kiếm lớn.
+- Ổn định: UCS và BFS (tiêu chuẩn) có hiệu suất tốt, thời gian nhanh (0.001 s) với số node vừa phải (9), phù hợp cho bài toán cần đường đi tối ưu.
+- Khuyến nghị: Ưu tiên BFS hoặc IDDFS (Double Moves) cho bài toán nhỏ, trong khi DFS nên tránh với không gian tìm kiếm lớn.
+
 
 ### 2.2. Nhóm thuật toán tìm kiếm có thông tin
 
@@ -91,6 +97,10 @@ Tìm kiếm có thông tin sử dụng thêm kiến thức về bài toán, dư�
 ![](hieusuat/ida-ao.png)
 
 **Nhận xét**
+- Tương tự như nhóm trên, thuật toán kết hợp với AND-OR Search Tree cho ra kết quả hiệu quả hơn.
+- Hiệu quả cao nhất: A* (Double Moves) và IDA* (Double Moves) vượt trội với 5 node và thời gian 0.000 s.
+- Hiệu quả thấp hơn: Greedy Search (27 node) tiêu tốn nhiều tài nguyên hơn.
+- Khuyến nghị: Ưu tiên A* hoặc IDA* (Double Moves) cho bài toán nhỏ và cần tối ưu. Tránh Greedy Search nếu không gian tìm kiếm lớn.
 
 ### 2.3. Các thuật toán Tìm kiếm cục bộ
 
@@ -134,6 +144,9 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
 ![](hieusuat/genetic-ao.png)
 
 **Nhận xét**
+- Hiệu quả cao nhất: Steepest Hill Climbing (Double Moves), Hill Climbing (Double Moves), và Beam Search (Double Moves) nổi bật với 5 node và thời gian 0.000-0.001 s, rất phù hợp cho bài toán nhỏ.
+- Hiệu quả thấp nhất: Stochastic Hill Climbing (554 node) và các thuật toán không tìm thấy đường đi (Hill Climbing, Steepest Hill Climbing, Simulated Annealing) kém hiệu quả (đối với trạng thái ban đầu này thì không tìm thấy đường đi)
+- Khuyến nghị: Ưu tiên Steepest Hill Climbing (Double Moves) hoặc Hill Climbing (Double Moves) cho bài toán nhỏ cần hiệu suất cao. Tránh Simulated Annealing và các biến thể không Double Moves do không tìm được giải pháp.
 
 ### 2.4. Các thuật toán Tìm kiếm trong môi trường phức tạp
 
@@ -155,7 +168,8 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
 ![](hieusuat/qlearning.png)
 
 **Nhận xét**
-
+- Thuật toán QLearning duyệt một số lượng rất lớn node (119704), nhưng chỉ cần 9 bước để tìm đường đi tối ưu, với thời gian 0.498 s. Điều này cho thấy QLearning hiệu quả trong việc học và tối ưu hóa đường đi sau khi xử lý nhiều trạng thái, nhưng tiêu tốn nhiều tài nguyên tính toán.
+- Phù hợp cho bài toán học tăng cường (reinforcement learning) với dữ liệu lớn, nhưng không tối ưu nếu yêu cầu tốc độ cao hoặc không gian tìm kiếm nhỏ.
 
 ---
 
