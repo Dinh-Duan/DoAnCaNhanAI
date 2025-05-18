@@ -49,6 +49,14 @@ Tìm kiếm không thông tin là nhóm thuật toán không sử dụng bất k
   - `UCS (Double Moves)` / `ucs_ANDOR` (Di chuyển đơn chi phí 1, di chuyển kép chi phí 2)
 
 **Hình ảnh hiệu suất**
+![](hieusuat/bfs.png)
+![](hieusuat/bfs-ao.png)
+![](hieusuat/dfs.png)
+![](hieusuat/dfs-ao.png)
+![](hieusuat/iddfs.png)
+![](hieusuat/iddfs-ao.png)
+![](hieusuat/ucs.png)
+![](hieusuat/ucs-ao.png)
 
 **Nhận xét**
 
@@ -73,6 +81,12 @@ Tìm kiếm có thông tin sử dụng thêm kiến thức về bài toán, dư�
   - `IDA* (Double Moves)` / `ida_star_ANDOR`
 
 **Hình ảnh hiệu suất**
+![](hieusuat/greedy.png)
+![](hieusuat/greedy-ao.png)
+![](hieusuat/astar.png)
+![](hieusuat/astar-ao.png)
+![](hieusuat/ida.png)
+![](hieusuat/ida-ao.png)
 
 **Nhận xét**
 
@@ -103,6 +117,18 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
   - `Genetic Algorithm (Double Moves)` / `genetic_ANDOR`
 
 **Hình ảnh hiệu suất**
+![](hieusuat/hc.png)
+![](hieusuat/hc-ao.png)
+![](hieusuat/stee-hc.png)
+![](hieusuat/stee-hc-ao.png)
+![](hieusuat/sto-hc.png)
+![](hieusuat/sto-hc-ao.png)
+![](hieusuat/beam.png)
+![](hieusuat/beam-ao.png)
+![](hieusuat/sa.png)
+![](hieusuat/sa-ao.png)
+![](hieusuat/genetic.png)
+![](hieusuat/genetic-ao.png)
 
 **Nhận xét**
 
@@ -121,6 +147,8 @@ Tìm kiếm cục bộ là nhóm thuật toán tối ưu hóa mà không duyệt
 - Agent học cách hành động tối ưu thông qua tương tác với môi trường và nhận phản hồi (reward/penalty).\*
   - **Q-Learning:** Triển khai trong `q_learning.py`. Agent xây dựng một bảng Q-table để ước lượng giá trị của việc thực hiện một hành động tại một trạng thái cụ thể. Cần quá trình "huấn luyện" để bảng Q-table hội tụ.
 
+**Hiệu suất**
+![](hieusuat/qlearning.png)
 **Nhận xét**
 
 ---
